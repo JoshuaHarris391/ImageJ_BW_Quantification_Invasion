@@ -1,4 +1,4 @@
-run("Image Sequence...", "open=[/Users/joshuaharris/Desktop/Image count folder] sort");
+run("Image Sequence...", "open=[INPUT_IMAGES] sort");
 run("8-bit");
 setAutoThreshold("Default dark");
 //run("Threshold...");
