@@ -1,8 +1,9 @@
-input = "/Users/joshua_harris/Dropbox/Research/Protocols/Invasion Assay/ImageJ_BW_Quantification_Invasion/Input_Images/";
-list = getFileList(input);
+root_dir = File.directory();
+input_dir = root_dir + "Input_Images/";
+list = getFileList(input_dir);
 for (i = 0; i < list.length; i++){
-				print(input, list[i]);
-        open(input + list[i]);
-				runMacro("/Users/joshua_harris/Dropbox/Research/Protocols/Invasion Assay/ImageJ_BW_Quantification_Invasion/autothresh.ijm");
+				print(input_dir, list[i]);
+        open(input_dir + list[i]);
+				runMacro(root_dir + "autothresh.ijm");
 }
 run("Images to Stack", "name=Stack title=[] use");
